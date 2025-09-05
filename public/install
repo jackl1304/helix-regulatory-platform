@@ -1,0 +1,8 @@
+#!/bin/bash
+cd /opt
+rm -rf helix
+mkdir helix && cd helix
+echo '{"name":"helix"}'>package.json
+npm i express pg cors --silent
+echo 'const e=require("express"),{Pool:P}=require("pg"),a=e();a.use(e.static("public"));const d=new P({user:"postgres",host:"localhost",database:"helix",password:"helix123"});a.get("/",(r,s)=>s.send(`<h1>🚀 Helix Platform</h1><p>VPS Ready: www.deltaways-helix.de</p>`));a.get("/api/status",async(r,s)=>{try{await d.query("SELECT 1");s.json({status:"success",db:"connected"})}catch(e){s.json({status:"error"})}});a.listen(3000,"0.0.0.0",()=>console.log("🚀 Helix läuft auf Port 3000"));'>index.js
+node index.js
