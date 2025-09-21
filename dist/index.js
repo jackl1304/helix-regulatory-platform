@@ -19846,7 +19846,7 @@ Verk\xFCndet am ${new Date(case_item.decisionDate || case_item.decision_date).to
 ${case_item.court}
 `.trim(),
         // SCHADENSERSATZ - Damages and compensation
-        damages: case_item.damages || `
+        damagesDetails: case_item.damages || `
 **SCHADENSERSATZBERECHNUNG - Fall ${case_item.caseNumber || case_item.case_number}**
 
 **ZUGESPROCHENE ENTSCH\xC4DIGUNG:**
