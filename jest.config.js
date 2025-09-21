@@ -16,9 +16,9 @@ export default {
       }
     }]
   },
-  moduleNameMapping: {
+  moduleNameMapper: {
     '^@shared/(.*)$': '<rootDir>/shared/$1',
-    '^@services/(.*)$': '<rootDir>/server/services/$1',
+    '^@services/(.*)$': '<rootDir>/server/services/$1',   
     '^@storage$': '<rootDir>/server/storage.ts',
     '^@schema$': '<rootDir>/shared/schema.ts'
   },
@@ -38,5 +38,13 @@ export default {
       statements: 70
     }
   },
-  setupFilesAfterEnv: ['<rootDir>/tests/setup.ts']
+  setupFilesAfterEnv: ['<rootDir>/tests/setup.ts'],
+  globals: {
+    'ts-jest': {
+      useESM: true
+    }
+  },
+  transformIgnorePatterns: [
+    'node_modules/(?!(express-rate-limit|express-slow-down)/)'
+  ]
 };
