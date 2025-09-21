@@ -1,2 +1,15 @@
 node_modules/
 .env
+dist/
+*.map
+*.log
+.DS_Store
+.vscode/
+.idea/
+coverage/
+*.old.*
+*.backup.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

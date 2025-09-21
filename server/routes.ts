@@ -1361,7 +1361,7 @@ ${case_item.court}
 `.trim(),
 
         // SCHADENSERSATZ - Damages and compensation
-        damages: (case_item as any).damages || `
+        damagesDetails: (case_item as any).damages || `
 **SCHADENSERSATZBERECHNUNG - Fall ${case_item.caseNumber || case_item.case_number}**
 
 **ZUGESPROCHENE ENTSCHÄDIGUNG:**
