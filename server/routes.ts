@@ -1361,7 +1361,7 @@ ${case_item.court}
 `.trim(),
 
         // SCHADENSERSATZ - Damages and compensation
-        damages: (case_item as any).damages || `
+
 **SCHADENSERSATZBERECHNUNG - Fall ${case_item.caseNumber || case_item.case_number}**
 
 **ZUGESPROCHENE ENTSCHÄDIGUNG:**
@@ -7047,3 +7047,5 @@ Für vollständige Details und weitere Analysen besuchen Sie die ursprüngliche 
   const httpServer = createServer(app);
   return httpServer;
 }
+
+Kannst du auf GitHub schauen? - Manus
